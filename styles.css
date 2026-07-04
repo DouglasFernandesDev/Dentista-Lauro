@@ -237,47 +237,115 @@
   dl.stats{ 
     display:grid; 
     grid-template-columns: repeat(3,1fr);
-     gap: 0; 
-     border-top:1px solid var(--pale); 
-     margin-top:36px;
+    gap: 0; 
+    border-top:1px solid var(--pale); 
+    margin-top:36px;
     }
   .stat{ 
-    padding: 22px 0; border-bottom:1px solid var(--pale); display:flex; flex-direction:column-reverse;}
+    padding: 22px 0; 
+    border-bottom:1px solid var(--pale); 
+    display:flex; 
+    flex-direction:column-reverse;
+}
   .stat dd{
-    font-family: var(--font-display); font-size: 40px; color: var(--deep); font-weight:600; margin:0;
+    font-family: var(--font-display);
+    font-size: 40px; 
+    color: var(--deep); 
+    font-weight:600;
+    margin:0;
   }
-  .stat dt{ font-size: 12px; color:#4d6478; text-transform:uppercase; letter-spacing:0.5px;}
+  .stat dt{
+    font-size: 12px; 
+    color:#4d6478; 
+    text-transform:uppercase; 
+    letter-spacing:0.5px;}
   .credencial-card{
-    background: var(--navy); color: var(--pale); padding: 36px 32px; border-radius: 4px;
+    background: var(--navy); 
+    color: var(--pale); 
+    padding: 36px 32px; 
+    border-radius: 4px;
   }
   .credencial-card h3{
-    font-family: var(--font-display); font-style:italic; font-weight:500; font-size:24px; color: var(--white); margin-bottom:18px;
+    font-family: var(--font-display); 
+    font-style:italic; 
+    font-weight:500; 
+    font-size:24px; 
+    color: var(--white); 
+    margin-bottom:18px;
   }
   .credencial-card li{
-    font-size: 14px; line-height: 1.9; padding-left: 20px; position:relative; color: var(--pale);
+    font-size: 14px; 
+    line-height: 1.9; 
+    padding-left: 20px; 
+    position:relative; 
+    color: var(--pale);
   }
   .credencial-card li::before{
-    content:''; position:absolute; left:0; top:9px; width:8px; height:2px; background: var(--sky);
+    content:''; 
+    position:absolute; 
+    left:0; top:9px; 
+    width:8px; 
+    height:2px; 
+    background: var(--sky);
   }
 
   /* ---------- Trabalhos ---------- */
-  .trabalhos-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;}
-  .trabalhos-desc{ max-width:380px; font-size:14px; color:#4d6478; line-height:1.6; padding-bottom:4px;}
+  .trabalhos-head{ 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:flex-end; 
+    gap:24px; 
+    flex-wrap:wrap;
+}
+  .trabalhos-desc{ 
+    max-width:380px; 
+    font-size:14px; 
+    color:#4d6478; 
+    line-height:1.6; 
+    padding-bottom:4px;
+}
   .grid-cases{
-    display:grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 48px;
+    display:grid; 
+    grid-template-columns: 
+    repeat(3,1fr); 
+    gap: 28px;
+    margin-top: 48px;
   }
   .grid-cases > li{ list-style:none; }
   .case-card{
-    border-radius: 4px; overflow:hidden; background: var(--paler);
-    box-shadow: 0 4px 18px rgba(7,27,51,0.06); display:block;
+    border-radius: 4px; 
+    overflow:hidden; 
+    background: var(--paler);
+    box-shadow: 0 4px 18px rgba(7,27,51,0.06); 
+    display:block;
   }
-  .case-imgs{ display:grid; grid-template-columns: 1fr 1fr; }
-  .case-imgs figure{ position:relative; aspect-ratio: 3/4; overflow:hidden; margin:0;}
-  .case-imgs img{ width:100%; height:100%; object-fit:cover;}
+  .case-imgs{ 
+    display:grid; 
+    grid-template-columns: 1fr 1fr; 
+}
+  .case-imgs figure{ 
+    position:relative; 
+    aspect-ratio: 3/4; 
+    overflow:hidden; 
+    margin:0;}
+  .case-imgs img{ 
+    width:100%; 
+    height:100%; 
+    object-fit:cover;
+}
   .case-imgs figcaption{
-    position:absolute; bottom:8px; left:8px;
-    font-family: var(--font-mono); font-size:10px; letter-spacing:1px;
-    background: rgba(7,27,51,0.75); color: var(--white); padding:3px 8px; border-radius:2px; text-transform:uppercase;
+    position:absolute; 
+    bottom:8px; 
+    left:8px;
+    font-family: 
+    var(--font-mono); 
+    font-size:10px; 
+    letter-spacing:1px;
+    background: rgba(7,27,51,0.75); 
+    color: var(--white); 
+    padding:3px 8px; 
+    border-radius:2px; 
+    text-transform:uppercase;
   }
   .case-card h3{ font-family: var(--font-display); font-size:19px; font-weight:600; color: var(--navy); margin:18px 20px 6px;}
   .case-desc{ font-size:13px; color:#4d6478; line-height:1.6; margin:0 20px;}
