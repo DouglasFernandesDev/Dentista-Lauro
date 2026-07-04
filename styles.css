@@ -134,15 +134,18 @@ input.alternar-menu:checked ~ ul{
 
 /* ---------- Capa + Perfil (padrão mobile) ---------- */
 .capa{
-  width:100%; 
-  display:flex; 
-  flex-direction:column; 
-  justify-content:flex-end;
-  height:auto; 
-  min-height: 280px;
-  padding: 0 6% 70px;
-  background: linear-gradient(120deg, rgba(7,27,51,0.75), rgba(46,111,156,0.35)), url('https://picsum.photos/seed/dental-clinic/1600/700') center/cover no-repeat;
+   height: 52vh; 
+    min-height: 340px; 
+    width:100%;
+    display:flex; 
+    flex-direction:column; 
+    justify-content:flex-end;
+    padding: 0 6% 90px;
+    background:
+    linear-gradient(120deg, rgba(7,27,51,0.75), rgba(46,111,156,0.35)),
+    url(imagens/capa.jpeg) center/cover no-repeat; 
 }
+
 .capa-destaque{
   font-family: var(--fonte-mono); 
   font-size: 12px; 
@@ -170,8 +173,8 @@ input.alternar-menu:checked ~ ul{
   gap:14px;
 }
 img.foto-perfil{
-  width: 108px; 
-  height: 108px; 
+  width: 250px; 
+  height: 250px; 
   border-radius: 50%; 
   object-fit:cover;
   border: 5px solid var(--branco); 
@@ -179,11 +182,12 @@ img.foto-perfil{
   box-shadow: 0 12px 28px rgba(7,27,51,0.25);
 }
 .info-perfil{
- padding-bottom: 14px;}
+ padding-bottom: 14px;
+}
 .nome-perfil{
  font-family: var(--fonte-titulo); 
  font-size: 26px; 
- font-weight:600; 
+ font-weight:600px; 
  color: var(--azul-marinho);
 }
 .subtitulo-perfil{
