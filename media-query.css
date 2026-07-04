@@ -1,0 +1,82 @@
+/* =====================================================
+   MOBILE FIRST — media queries em cascata (min-width)
+   Cada faixa herda a anterior e só sobrescreve o que muda.
+   Ordem importa: tablet primeiro, depois desktop.
+   ===================================================== */
+
+/* ---------- A partir de 641px: liga o layout de TABLET ---------- */
+@media (min-width: 641px) {
+
+  /* Navegação vira horizontal, esconde o hambúrguer */
+  .navegacao{ flex-wrap: nowrap; }
+  .rotulo-alternar-menu{ display:none; }
+  .navegacao .logotipo{ font-size: 22px; order:initial; }
+  .navegacao .botao-agendar-nav{ order:initial; }
+  .navegacao ul{
+    order:initial; flex-basis:auto; flex-direction:row; gap:32px;
+    max-height:none; overflow:visible;
+  }
+  input.alternar-menu:checked ~ ul,
+  .navegacao ul{ max-height:none; }
+  .navegacao ul li a{ display:inline; padding:0; }
+
+  /* Capa cresce e ganha o piso de altura do desktop */
+  .capa{ height: 46vh; min-height: 340px; padding-bottom: 90px; }
+
+  /* Perfil volta a ficar em linha, com maior sobreposição na capa */
+  .barra-perfil{ flex-direction: row; align-items:flex-end; gap:24px; margin-top:-64px; padding: 0 5%; }
+  img.foto-perfil{ width:132px; height:132px; }
+  .nome-perfil{ font-size: 30px; }
+
+  /* Título da capa e das seções já escalam sozinhos via clamp() — sem necessidade de override aqui */
+
+  /* Estatísticas voltam a ficar coladas (sem gutter extra) */
+  dl.estatisticas{ gap: 0; }
+  .estatistica dd{ font-size: 40px; }
+  .estatistica dt{ font-size: 12px; }
+
+  /* Seções ganham mais espaço interno */
+  section{ padding: 70px 5%; }
+
+  /* Sobre: 2 colunas */
+  .grade-sobre{ grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+  .cartao-credenciais{ padding: 36px 32px; }
+  .cartao-credenciais h3{ font-size:24px; }
+
+  /* Trabalhos: cabeçalho lado a lado, grade de 2 colunas */
+  .cabecalho-trabalhos{
+    flex-direction: row; justify-content:space-between; align-items:flex-end; flex-wrap:wrap;
+  }
+  .descricao-trabalhos{ padding-bottom:4px; }
+  .grade-casos{ grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+  /* Chamada para ação e botão primário ganham mais espaço */
+  .botao-primario{ padding: 16px 34px; }
+
+  /* Contato: 2 colunas */
+  .grade-contato{ grid-template-columns: 1fr 1fr; gap: 40px; }
+  figure.caixa-mapa{ min-height:280px; }
+  figure.caixa-mapa img{ min-height:280px; }
+}
+
+/* ---------- A partir de 1025px: liga os ajustes de DESKTOP ---------- */
+@media (min-width: 1025px) {
+
+  /* Capa no tamanho final de desktop */
+  .capa{ height: 52vh; }
+
+  /* Perfil com o padding de 6% novamente (o de 5% era só do tablet) */
+  .barra-perfil{ padding: 0 6%; }
+
+  /* Seções com o espaçamento máximo */
+  section{ padding: 90px 6%; }
+
+  /* Sobre: gap maior, como no design original */
+  .grade-sobre{ gap: 64px; }
+
+  /* Trabalhos: volta para 3 colunas com o gap original */
+  .grade-casos{ grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+  /* Contato: gap maior */
+  .grade-contato{ gap: 60px; }
+}

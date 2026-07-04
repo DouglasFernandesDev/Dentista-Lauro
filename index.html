@@ -7,36 +7,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/media-query.css">
 </head>
 <body>
 
-  <nav class="nav">
-    <a class="logo" href="#topo">Dr. Lauro Santos <span>· Facetas</span></a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menu">☰</label>
+  <hr class="faixa-cor">
+
+  <nav class="navegacao">
+    <a class="logotipo" href="#topo">Dr. Lauro Santos <span>· Facetas</span></a>
+    <input type="checkbox" id="alternar-menu" class="alternar-menu">
+    <label for="alternar-menu" class="rotulo-alternar-menu" aria-label="Abrir menu">☰</label>
     <ul>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#trabalhos">Trabalhos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <a class="nav-cta" href="#cta">Agendar</a>
+    <a class="botao-agendar-nav" href="#chamada-acao">Agendar</a>
   </nav>
 
   <header id="topo">
-    <div class="cover">
+    <div class="capa">
       <hgroup>
-        <p class="cover-eyebrow">Odontologia Estética</p>
-        <h1 class="cover-title">Seu sorriso, redesenhado com precisão.</h1>
+        <p class="cover-capa-destaque">Odontologia Estética</p>
+        <h1 class="capa-titulo">Seu sorriso, redesenhado com precisão.</h1>
       </hgroup>
     </div>
-    <div class="profile-bar">
-      <img class="profile-photo" src="imagens/perfil.jpeg" alt="Foto de perfil do Dr. Lauro Santos">
-      <div class="profile-info">
+    <div class="barra-perfil">
+      <img class="foto-perfil" src="imagens/perfil.jpeg" alt="Foto de perfil do Dr. Lauro Santos">
+      <div class="info-perfil">
         <hgroup>
-          <h2 class="profile-name">Dr. Lauro Santos</h2>
-          <p class="profile-sub">Especialista em Facetas de Porcelana e Resina</p>
+          <h2 class="nome-perfil">Dr. Lauro Santos</h2>
+          <p class="subtitulo-perfil">Especialista em Facetas de Porcelana e Resina</p>
         </hgroup>
-        <ul class="profile-meta">
+        <ul class="metadados-perfil">
           <li>CRO-SP 00000</li>
           <li>12 anos de experiência</li>
           <li>+800 sorrisos transformados</li>
@@ -47,22 +50,22 @@
 
   <main>
     <section class="sobre" id="sobre">
-      <div class="section-inner">
+      <div class="conteudo">
         <hgroup>
-          <p class="eyebrow">Sobre</p>
-          <h2 class="section-title">Facetas não escondem o dente — elas revelam o sorriso que já é seu.</h2>
+          <p class="destaque">Sobre</p>
+          <h2 class="titulo-secao">Facetas não escondem o dente — elas revelam o sorriso que já é seu.</h2>
         </hgroup>
-        <div class="sobre-grid">
-          <div class="sobre-copy">
+        <div class="grade-sobre">
+          <div class="texto-sobre">
             <p>Há 12 anos dedicada à odontologia estética, sou especialista em facetas de porcelana e resina, com foco em resultados naturais: sorrisos que respeitam a harmonia do rosto, sem exagero e sem padronização.</p>
             <p>Cada tratamento começa com um planejamento digital do sorriso, onde formato, cor e proporção são definidos junto com você antes de qualquer preparo dental.</p>
-            <dl class="stats">
-              <div class="stat"><dt>Facetas realizadas</dt><dd>800+</dd></div>
-              <div class="stat"><dt>Anos de atuação</dt><dd>12</dd></div>
-              <div class="stat"><dt>Avaliação média</dt><dd>4,9</dd></div>
+            <dl class="estatisticas">
+              <div class="estatisticas"><dt>Facetas realizadas</dt><dd>800+</dd></div>
+              <div class="estatisticas"><dt>Anos de atuação</dt><dd>12</dd></div>
+              <div class="estatisticas"><dt>Avaliação média</dt><dd>4,9</dd></div>
             </dl>
           </div>
-          <aside class="credencial-card">
+          <aside class="cartao-credenciais">
             <h3>Formação &amp; credenciais</h3>
             <ul>
               <li>Especialização em Dentística e Estética — [Instituição]</li>
@@ -75,95 +78,95 @@
       </div>
     </section>
 
-    <hr class="shade-strip">
+    <hr class="faixa-cor">
 
     <section class="trabalhos" id="trabalhos">
-      <div class="section-inner">
-        <div class="trabalhos-head">
+      <div class="conteudo">
+        <div class="cabecalho-trabalhos">
           <hgroup>
-            <p class="eyebrow">Trabalhos</p>
-            <h2 class="section-title">Antes e depois: cada caso, um planejamento próprio.</h2>
+            <p class="destaque">Trabalhos</p>
+            <h2 class="titulo-secao">Antes e depois: cada caso, um planejamento próprio.</h2>
           </hgroup>
-          <p class="trabalhos-desc">Resultados reais de pacientes atendidos no consultório, com autorização de uso de imagem.</p>
+          <p class="descricao-trabalhos">Resultados reais de pacientes atendidos no consultório, com autorização de uso de imagem.</p>
         </div>
 
-        <ul class="grid-cases">
-          <li><article class="case-card">
-            <div class="case-imgs">
+        <ul class="grade-casos">
+          <li><article class="cartao-caso">
+            <div class="imagens-caso">
               <figure><img src="imagens/ANTES.JPEG" alt="Sorriso antes do tratamento"><figcaption>Antes</figcaption></figure>
               <figure><img src="imagens/depois.JPEG" alt="Sorriso depois do tratamento"><figcaption>Depois</figcaption></figure>
             </div>
             <h3>Fechamento de diastema</h3>
-            <p class="case-desc">6 facetas em porcelana no arco superior para unificar o sorriso.</p>
-            <p class="case-code">CASO 01 · PORCELANA</p>
+            <p class="descricao-caso">6 facetas em porcelana no arco superior para unificar o sorriso.</p>
+            <p class="codigo-caso">CASO 01 · PORCELANA</p>
           </article></li>
 
-          <li><article class="case-card">
-            <div class="case-imgs">
+          <li><article class="cartao-caso">
+            <div class="imagens-caso">
               <figure><img src="imagens/ANTES2.JPEG" alt="Sorriso antes do tratamento"><figcaption>Antes</figcaption></figure>
               <figure><img src="imagens/depois2.jpeg" alt="Sorriso depois do tratamento"><figcaption>Depois</figcaption></figure>
             </div>
             <h3>Correção de cor e desgaste</h3>
-            <p class="case-desc">8 facetas em resina para recuperar volume e uniformidade.</p>
-            <p class="case-code">CASO 02 · RESINA</p>
+            <p class="descricao-caso">8 facetas em resina para recuperar volume e uniformidade.</p>
+            <p class="codigo-caso">CASO 02 · RESINA</p>
           </article></li>
 
-          <li><article class="case-card">
-            <div class="case-imgs">
+          <li><article class="cartao-caso">
+            <div class="imagens-caso">
               <figure><img src="https://picsum.photos/seed/antes3/300/400" alt="Sorriso antes do tratamento"><figcaption>Antes</figcaption></figure>
               <figure><img src="https://picsum.photos/seed/depois3/300/400" alt="Sorriso depois do tratamento"><figcaption>Depois</figcaption></figure>
             </div>
             <h3>Harmonização do sorriso</h3>
-            <p class="case-desc">10 facetas em porcelana com planejamento digital prévio.</p>
-            <p class="case-code">CASO 03 · PORCELANA</p>
+            <p class="descricao-caso">10 facetas em porcelana com planejamento digital prévio.</p>
+            <p class="codigo-caso">CASO 03 · PORCELANA</p>
           </article></li>
         </ul>
       </div>
     </section>
 
-    <section class="cta" id="cta">
-      <div class="section-inner">
+    <section class="chamada-acao" id="chamada-acao">
+      <div class="conteudo">
         <hgroup>
-          <p class="eyebrow">Chamada para ação</p>
+          <p class="destaque">Chamada para ação</p>
           <h2>Vamos planejar o seu sorriso?</h2>
         </hgroup>
-        <p class="cta-desc">A primeira avaliação inclui análise facial, simulação digital do resultado e um plano de tratamento sob medida — sem compromisso.</p>
-        <a class="btn-primary" href="#contato">Agendar avaliação gratuita →</a>
+        <p class="descricao-chamada">A primeira avaliação inclui análise facial, simulação digital do resultado e um plano de tratamento sob medida — sem compromisso.</p>
+        <a class="botao-primario" href="#contato">Agendar avaliação gratuita →</a>
       </div>
     </section>
 
     <section class="contato" id="contato">
-      <div class="section-inner">
+      <div class="conteudo">
         <hgroup>
-          <p class="eyebrow">Contato</p>
-          <h2 class="section-title">Fale comigo e agende seu horário.</h2>
+          <p class="destaque">Contato</p>
+          <h2 class="titulo-secao">Fale comigo e agende seu horário.</h2>
         </hgroup>
-        <div class="contato-grid">
-          <address class="contato-list">
+        <div class="grade-contato">
+          <address class="lista-contato">
             <dl>
-              <div class="contato-item">
-                <span class="dot" aria-hidden="true">W</span>
+              <div class="item-contato">
+                <span class="icone-contato" aria-hidden="true">W</span>
                 <div><dt>WhatsApp</dt><dd>(21) 90000-0000</dd></div>
               </div>
-              <div class="contato-item">
-                <span class="dot" aria-hidden="true">@</span>
+              <div class="item-contato">
+                <span class="icone-contato" aria-hidden="true">@</span>
                 <div><dt>Instagram</dt><dd>@dra.camiladuarte.odonto</dd></div>
               </div>
-              <div class="contato-item">
-                <span class="dot" aria-hidden="true">E</span>
+              <div class="item-contato">
+                <span class="icone-contato" aria-hidden="true">E</span>
                 <div><dt>E-mail</dt><dd>contato@camiladuarteodonto.com.br</dd></div>
               </div>
-              <div class="contato-item">
-                <span class="dot" aria-hidden="true">L</span>
+              <div class="item-contato">
+                <span class="icone-contato" aria-hidden="true">L</span>
                 <div><dt>Endereço</dt><dd>Rua das Orquídeas, 145 — Centro, sala 302</dd></div>
               </div>
-              <div class="contato-item">
-                <span class="dot" aria-hidden="true">H</span>
+              <div class="item-contato">
+                <span class="icone-contato" aria-hidden="true">H</span>
                 <div><dt>Horário</dt><dd>Segunda a sexta, 9h às 18h</dd></div>
               </div>
             </dl>
           </address>
-          <figure class="map-box">
+          <figure class="caixa-mapa">
             <img src="https://picsum.photos/seed/mapa-clinica/700/560" alt="Mapa de localização do consultório">
             <figcaption>Rua das Orquídeas, 145 — Centro</figcaption>
           </figure>
@@ -172,10 +175,10 @@
     </section>
   </main>
 
-  <hr class="shade-strip">
+  <hr class="faixa-cor">
 
   <footer>
-    <p class="foot-logo">Lauro Santos Odontologia</p>
+    <p class="logotipo-rodape">Lauro Santos Odontologia</p>
     <p>Feito com foco em sorrisos naturais · CRO-SP 00000</p>
   </footer>
 
