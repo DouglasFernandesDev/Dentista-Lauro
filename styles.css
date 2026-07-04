@@ -1,11 +1,5 @@
 
 
-  /* =====================================================
-   ESTILOS BASE — arquitetura Mobile First
-   Tudo aqui é o padrão para telas pequenas (celular).
-   Tablet e desktop são "ligados" progressivamente em
-   mobile-first.css usando media queries min-width.
-   ===================================================== */
 
 :root{
   --azul-marinho: #071B33;
@@ -109,6 +103,7 @@ input.alternar-menu{
   order:3;
 }
 .navegacao ul{
+  display: flex;
   order:4; 
   flex-basis:100%; 
   flex-direction:column; 
@@ -116,6 +111,8 @@ input.alternar-menu{
   max-height:0; 
   overflow:hidden; 
   transition:max-height .3s ease;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 input.alternar-menu:checked ~ ul{ 
   max-height:220px; 
@@ -308,7 +305,7 @@ h2.titulo-secao{
   color: var(--azul-palido);
 }
 .cartao-credenciais li::before{
-  
+
 
   content:'';
   position:absolute;

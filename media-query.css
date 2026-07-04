@@ -5,7 +5,7 @@
    ===================================================== */
 
 /* ---------- A partir de 641px: liga o layout de TABLET ---------- */
-@media (min-width: 641px) {
+@media (min-width: 768px) {
 
   /* Navegação vira horizontal, esconde o hambúrguer */
   .navegacao{ flex-wrap: nowrap; }
