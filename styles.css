@@ -309,8 +309,6 @@ h2.titulo-secao{
   color: var(--azul-palido);
 }
 .cartao-credenciais li::before{
-
-
   content:'';
   position:absolute;
   left:0;
@@ -371,6 +369,7 @@ h2.titulo-secao{
   padding:3px 8px; border-radius:2px; 
   text-transform:uppercase;
 }
+
 .cartao-caso h3{ 
   font-family: var(--fonte-titulo); 
   font-size:19px; 
