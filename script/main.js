@@ -1,13 +1,13 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const navegacao   = document.querySelector('.navegacao');
   const checkboxMenu = document.getElementById('alternar-menu');
   const linksMenu    = document.querySelectorAll('.navegacao ul a[href^="#"]');
   const suportaObserver = 'IntersectionObserver' in window;
+  const prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  
+
+  // ---------- Fecha o menu mobile ao clicar em um link ----------
   linksMenu.forEach((link) => {
     link.addEventListener('click', () => {
       if (checkboxMenu && checkboxMenu.checked) {
@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
+
+  // ---------- Navegação muda de estilo ao rolar (sai do topo) ----------
   const primeiraFaixa = document.querySelector('hr.faixa-cor');
   if (primeiraFaixa && navegacao && suportaObserver) {
     const observadorTopo = new IntersectionObserver(([entrada]) => {
@@ -25,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     observadorTopo.observe(primeiraFaixa);
   }
 
-  
+
+  // ---------- Marca o link do menu correspondente à seção visível ----------
   if (suportaObserver && linksMenu.length) {
     const observadorSecoes = new IntersectionObserver((entradas) => {
       entradas.forEach((entrada) => {
@@ -44,24 +46,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  const prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const cards = document.querySelectorAll('.cartao-caso');
 
-  if (suportaObserver && cards.length && !prefereMenosMovimento) {
-    const observadorCards = new IntersectionObserver((entradas, observador) => {
+  // ---------- Efeito cascata ao rolar (reutilizável para vários grupos) ----------
+  function animarGrupo(seletor, classeEsconder, classeVisivel, opcoes = { threshold: 0.2 }) {
+    const itens = document.querySelectorAll(seletor);
+    if (!suportaObserver || !itens.length || prefereMenosMovimento) return;
+
+    const observador = new IntersectionObserver((entradas, obs) => {
       entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
-          entrada.target.classList.add('cartao-visivel');
-          observador.unobserve(entrada.target);
+          entrada.target.classList.add(classeVisivel);
+          obs.unobserve(entrada.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, opcoes);
 
-    cards.forEach((card) => {
-      card.classList.add('cartao-esconder');
-      observadorCards.observe(card);
+    itens.forEach((item) => {
+      item.classList.add(classeEsconder);
+      observador.observe(item);
     });
   }
+
+  // Cards de "Trabalhos"
+  animarGrupo('.cartao-caso', 'cartao-esconder', 'cartao-visivel', { threshold: 0.2});
+
+  // Itens de contato (WhatsApp, Instagram, Email, Localização, Horário)
+  animarGrupo('.item-contato', 'animar-esconder', 'animar-visivel', { threshold: 0.10});
+
+  // Bloco "Sobre" (texto + credenciais)
+  animarGrupo('.texto-sobre, .cartao-credenciais', 'animar-esconder', 'animar-visivel', { threshold: 0.10 });
+
+  // Imagem ao lado do contato
+  animarGrupo('.imagem-contato', 'animar-esconder', 'animar-visivel', { threshold: 0.10 });
 
 });

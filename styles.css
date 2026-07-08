@@ -260,30 +260,7 @@ h2.titulo-secao{
   color: #223140;
   margin-bottom:18px; max-width: 520px;
 }
- dl.estatisticas{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 0 10px; border-top:1px solid var(--azul-palido);
-  margin-top:36px;
-}
-.estatistica{
-  padding: 22px 0;
-  border-bottom:1px solid var(--azul-palido);
-  display:flex; flex-direction:column-reverse
-}
-.estatistica dd{
 
-  font-family: var(--fonte-titulo);
-  font-size: 32px;
-  color: var(--azul-profundo);
-  font-weight:600;
-  margin:0;
-}
-.estatistica dt{
-  font-size: 11px;
-  color:#4d6478;
-  text-transform:uppercase; letter-spacing:0.5px
-}
 .cartao-credenciais{
 
   background: var(--azul-marinho);
@@ -451,7 +428,7 @@ h2.titulo-secao{
   display: flex;
   align-items: center;
   gap: 16px;
-  background-color: #dceefc;     
+  background-color: var(--azul-ceu);     
   border: 1px solid #bde0fa;
   border-radius: 12px;
   padding: 16px 20px;
@@ -464,19 +441,19 @@ h2.titulo-secao{
   box-shadow: 0 6px 14px rgba(13, 95, 158, 0.15);
 }
 .item-contato:active {
-  background-color: #a8d4f5;
+  background-color: var(--azul-aco);
   transform: translateY(-1px) scale(0.98);
   box-shadow: 0 2px 6px rgba(13, 95, 158, 0.15);
 }
 .item-contato:hover .icone-contato {
-  background-color: #ffffff;
+  background-color: var(--azul-ceu);
 }
 .item-contato div {
   display: flex;
   flex-direction: column;
 }
 .item-contato a {
-  color: #0d5f9e;
+  color: var(--azul-aco);
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
@@ -493,14 +470,13 @@ h2.titulo-secao{
   width:36px; 
   height:36px; 
   border-radius:50%; 
-  background: var(--azul-mais-palido);
+  background: var(--azul-ceu);
   display:flex; 
   align-items:center; 
   justify-content:center; 
   flex-shrink:0;
   color: var(--azul-aco); 
-  font-family: var(--fonte-mono); 
-  font-size:13px; 
+  font-size:16px; 
   font-weight:600; 
 }
 .item-contato a{ 
@@ -556,11 +532,28 @@ footer .logotipo-rodape{
   color:var(--branco); 
   margin-bottom:8px;
 }
+/* ---------- Efeito cascata ao rolar ---------- */
+.cartao-esconder,
+.animar-esconder{
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.cartao-visivel,
+.animar-visivel{
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Cascata: atraso progressivo entre irmãos do mesmo grupo */
+.animar-esconder:nth-child(1){ transition-delay: 0s; }
+.animar-esconder:nth-child(2){ transition-delay: 0.1s; }
+.animar-esconder:nth-child(3){ transition-delay: 0.2s; }
+.animar-esconder:nth-child(4){ transition-delay: 0.3s; }
+.animar-esconder:nth-child(5){ transition-delay: 0.4s; }
+.animar-esconder:nth-child(6){ transition-delay: 0.5s; }
 
-
-/* ---------- Acessibilidade: respeita preferência do usuário por menos movimento ---------- */
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior:auto; }
-  .botao-primario, .navegacao ul{ transition:none; }
+.cartao-esconder:nth-child(1){ transition-delay: 0s; }
+.cartao-esconder:nth-child(2){ transition-delay: 0.15s; }
+.cartao-esconder:nth-child(3){ transition-delay: 0.3s; 
 }
