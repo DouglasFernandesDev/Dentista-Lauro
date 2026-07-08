@@ -438,18 +438,33 @@ h2.titulo-secao{
   margin-top: 40px;
 }
 .lista-contato{ 
-  font-style:normal; 
+  font-style:normal;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-.lista-contato a{ 
+.lista-contato a{   
   display:flex; 
   flex-direction:row;
   gap:22px; }
 .item-contato{ 
-  display:flex; 
-  gap:16px; 
-  align-items:center;
-  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #dceefc;     
+  border: 1px solid #bde0fa;
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
+.item-contato:hover {
+.item-contato:active {
+  background-color: #a8d4f5;
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 2px 6px rgba(13, 95, 158, 0.15);
+}
+
 .item-contato .icone-contato{
   width:36px; 
   height:36px; 
