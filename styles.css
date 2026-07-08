@@ -459,6 +459,10 @@ h2.titulo-secao{
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 .item-contato:hover {
+  background-color:var(--azul-medio) ;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(13, 95, 158, 0.15);
+}
 .item-contato:active {
   background-color: #a8d4f5;
   transform: translateY(-1px) scale(0.98);
