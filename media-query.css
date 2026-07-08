@@ -98,14 +98,25 @@
 
   /* Contato: 2 colunas */
   .grade-contato{ 
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1.3fr 1fr; 
     gap: 40px; 
+  }
+.imagem-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  figure.caixa-mapa{ 
-    min-height:280px; 
+ .caixa-mapa {
+  width: 100%;
+  margin: 0;
 }
-  figure.caixa-mapa img{ 
-    min-height:280px; 
+
+.caixa-mapa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 }

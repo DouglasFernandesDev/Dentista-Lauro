@@ -468,7 +468,27 @@ h2.titulo-secao{
   transform: translateY(-1px) scale(0.98);
   box-shadow: 0 2px 6px rgba(13, 95, 158, 0.15);
 }
-
+.item-contato:hover .icone-contato {
+  background-color: #ffffff;
+}
+.item-contato div {
+  display: flex;
+  flex-direction: column;
+}
+.item-contato a {
+  color: #0d5f9e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+.item-contato a:hover {
+  text-decoration: underline;
+}
+.item-contato .texto-info {
+  color:var(--azul-marinho);
+  font-weight: 500;
+  font-size: 15px;
+}
 .item-contato .icone-contato{
   width:36px; 
   height:36px; 
@@ -490,24 +510,24 @@ h2.titulo-secao{
   margin: 0px;
 }
 
+
 .texto-info {
   font-size:14px; 
   color: var(--azul-marinho); 
   font-weight:600; 
   margin-bottom:3px;
 }
-figure.caixa-mapa{
-  border-radius:4px; 
-  overflow:hidden;
-   min-height:240px; 
-  position:relative; 
-  margin:0;
+.caixa-mapa {
+  width: 100%;
+  margin: 0;
 }
-figure.caixa-mapa img{ 
-  width:120%; 
-  height:80%; 
-  min-height:240px; 
-  object-fit:cover; 
+
+.caixa-mapa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 figure.caixa-mapa figcaption{
   position:absolute; 
@@ -519,6 +539,7 @@ figure.caixa-mapa figcaption{
   font-size:11px; 
   padding:6px 12px; 
   border-radius:2px;
+
 }
 
 /* ---------- Rodapé ---------- */
