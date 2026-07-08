@@ -437,17 +437,18 @@ h2.titulo-secao{
   gap: 60px; 
   margin-top: 40px;
 }
-address.lista-contato{ 
+.lista-contato{ 
   font-style:normal; 
 }
-address.lista-contato dl{ 
+.lista-contato a{ 
   display:flex; 
-  flex-direction:column; 
+  flex-direction:row;
   gap:22px; }
 .item-contato{ 
   display:flex; 
   gap:16px; 
-  align-items:flex-start;
+  align-items:center;
+  flex-direction: column;
 }
 .item-contato .icone-contato{
   width:36px; 
@@ -460,17 +461,21 @@ address.lista-contato dl{
   flex-shrink:0;
   color: var(--azul-aco); 
   font-family: var(--fonte-mono); 
-  font-size:13px; font-weight:600;
+  font-size:13px; 
+  font-weight:600; 
 }
-.item-contato dt{ 
+.item-contato a{ 
   font-size:14px; 
   color: var(--azul-marinho); 
-  font-weight:600; margin-bottom:3px;
+  font-weight:600; 
+  margin: 0px;
 }
-.item-contato dd{ 
+
+.texto-info {
   font-size:14px; 
-  color:#4d6478;
-   margin:0;
+  color: var(--azul-marinho); 
+  font-weight:600; 
+  margin-bottom:3px;
 }
 figure.caixa-mapa{
   border-radius:4px; 
@@ -480,8 +485,8 @@ figure.caixa-mapa{
   margin:0;
 }
 figure.caixa-mapa img{ 
-  width:100%; 
-  height:100%; 
+  width:120%; 
+  height:80%; 
   min-height:240px; 
   object-fit:cover; 
 }
@@ -511,6 +516,8 @@ footer .logotipo-rodape{
   color:var(--branco); 
   margin-bottom:8px;
 }
+
+
 
 /* ---------- Acessibilidade: respeita preferência do usuário por menos movimento ---------- */
 @media (prefers-reduced-motion: reduce){

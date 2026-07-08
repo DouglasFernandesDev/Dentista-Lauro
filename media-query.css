@@ -59,16 +59,6 @@
 
   /* Título da capa e das seções já escalam sozinhos via clamp() — sem necessidade de override aqui */
 
-  /* Estatísticas voltam a ficar coladas (sem gutter extra) */
-  dl.estatisticas{ 
-    gap: 0; 
-}
-  .estatistica dd{ 
-    font-size: 40px; 
-}
-  .estatistica dt{ 
-    font-size: 12px; 
-}
 
   /* Seções ganham mais espaço interno */
   section{ 
@@ -108,7 +98,7 @@
 
   /* Contato: 2 colunas */
   .grade-contato{ 
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr; 
     gap: 40px; 
 }
   figure.caixa-mapa{ 
@@ -117,6 +107,7 @@
   figure.caixa-mapa img{ 
     min-height:280px; 
 }
+
 }
 
 /* ---------- A partir de 1025px: liga os ajustes de DESKTOP ---------- */
@@ -152,4 +143,5 @@
   .grade-contato{ 
     gap: 60px; 
 }
+
 }
